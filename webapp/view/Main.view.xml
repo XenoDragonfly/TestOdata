@@ -1,0 +1,22 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" height="100%" controllerName="sap.training.controller.Main">
+<!--	<ComboBox id="ComboBoxCategory" items="{/Categories}">
+	<items>
+	    <core:ListItem text="{CategoryName}" id="ComboItem1" key="{CategoryID}" additionalText="{CategoryID}"/>
+	</items>
+	</ComboBox>-->
+	<List id="ShortProductList" headerText="Categories" items="{/Products}">
+	<items>
+	    <StandardListItem type="Navigation" title="{ProductName}" description="{CategoryID}" icon="sap-icon://picture" id="__item1"/>
+	</items>
+	<headerToolbar>
+	    <Toolbar width="100%" id="__toolbar1">
+	        <content>
+	            <ComboBox selectedItem="null" value="List Item 1" id="__box0" items="{/Categories}">
+	                <items>
+	                    <core:ListItem text="{CategoryName}" key="{CategoryID}" id="__item3" additionalText="{CategoryID}"/></items>
+	            </ComboBox>
+	        </content>
+	    </Toolbar>
+	</headerToolbar>
+	</List>
+</mvc:View>
